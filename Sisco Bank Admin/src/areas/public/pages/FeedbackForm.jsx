@@ -38,7 +38,7 @@ const FeedbackForm = () => {
             <div className="mb-4">
               <label className="block text-lg font-semibold text-gray-700 mb-1">TYPE *</label>
               <select
-                {...register("type", { required: "Type is required" })}
+                {...register("feedback_type_id", { required: "Type is required" })}
                 className="w-full border-2 focus:border-green-500 focus:outline-none border-gray-300 rounded-lg p-2"
               >
                 <option value="">Select</option>
@@ -55,7 +55,7 @@ const FeedbackForm = () => {
             <div className="mb-4">
               <label className="block text-lg font-semibold text-gray-700 mb-1">NAME *</label>
               <input
-                {...register("name", { required: "Name is required" })}
+                {...register("customer_name", { required: "Name is required" })}
                 className="w-full border-2 focus:border-green-500 focus:outline-none border-gray-300 rounded-lg p-2"
                 placeholder="Provide your Full Name"
               />
@@ -66,7 +66,7 @@ const FeedbackForm = () => {
             <div className="mb-4">
               <label className="block text-lg font-semibold text-gray-700 mb-1">EMAIL-ADDRESS *</label>
               <input
-                {...register("email", {
+                {...register("customer_email", {
                   required: "Email is required",
                   pattern: /^[^@]+@[^@]+\.[^@]+$/,
                 })}
@@ -80,7 +80,7 @@ const FeedbackForm = () => {
             <div className="mb-4">
               <label className="block text-lg font-semibold text-gray-700 mb-1">CONTACT NUMBER *</label>
               <input
-                {...register("contact", {
+                {...register("customer_contact", {
                   required: "Contact number is required",
                   minLength: { value: 10, message: "Minimum length is 10" },
                 })}
@@ -94,7 +94,7 @@ const FeedbackForm = () => {
             <div className="mb-4">
               <label className="block text-lg font-semibold text-gray-700 mb-1">ADDRESS *</label>
               <textarea
-                {...register("address", { required: "Address is required" })}
+                {...register("customer_address", { required: "Address is required" })}
                 className="w-full border-2 border-gray-300 rounded-lg p-2 focus:border-green-500 focus:outline-none"
                 placeholder="Provide your Full Address"
               ></textarea>
@@ -105,7 +105,7 @@ const FeedbackForm = () => {
             <div className="mb-4">
               <label className="block text-lg font-semibold text-gray-700 mb-1">ACCOUNT NUMBER *</label>
               <input
-                {...register("accountNumber", {
+                {...register("customer_account_number", {
                   required: "Account Number is required",
                   pattern: { value: /^[0-9]+$/, message: "Account Number must be numeric" },
                 })}
@@ -119,7 +119,7 @@ const FeedbackForm = () => {
             <div className="mb-4">
               <label className="block text-lg font-semibold text-gray-700 mb-1">DESCRIPTION *</label>
               <textarea
-                {...register("description", { required: "Description is required" })}
+                {...register("feedback_description", { required: "Description is required" })}
                 className="w-full border-2 border-gray-300 rounded-lg p-2 focus:border-green-500 focus:outline-none"
                 placeholder="Provide description (in less than 250 words)"
               ></textarea>
